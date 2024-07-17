@@ -12,10 +12,13 @@ body {
 }
 
 nav {
-    background-color: #2ca0f3;
-    color: #fff;
-    padding: 5px 5px;
-    border-radius: 15px;
+    background-color: #dbe7f0;
+    box-shadow: 0 0 4px #bbd0e2;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    left: 0;
+    right: 0;
 }
 
 .nav-container {
@@ -25,7 +28,8 @@ nav {
 }
 
 .logo img {
-    height: 100px; /* Adjust height as per your design */
+    height: 100px;
+    /* Adjust height as per your design */
     /* You can also specify width if needed, or use max-width to ensure responsiveness */
 }
 
@@ -45,7 +49,7 @@ nav {
 .hamburger .line {
     width: 25px;
     height: 3px;
-    background-color: #fff;
+    background-color: #1a1212;
     margin: 5px 0;
     transition: transform 0.4s ease;
 }
@@ -63,15 +67,21 @@ nav {
     padding: 10px 15px;
     cursor: pointer;
 }
-.nav-links ul li a{
+
+.nav-links ul li a {
     font-weight: bold;
-    color: white;
+    color: rgb(0, 0, 0);
     text-decoration: none;
 }
 
+.nav-links ul li a:hover {
+    color: #0099ff;
+    
+}
+
 .search-bar {
-    margin-top: 20px;
     display: flex;
+    margin-top: 50px;
     justify-content: center;
     align-items: flex-end;
 }
@@ -101,13 +111,14 @@ nav {
 }
 
 .cards-container {
-    justify-content: space-between;
+    display: flex;
     flex-wrap: wrap;
-    row-gap: 20px;
-    align-items: start;
+    gap: 20px;
+    /* Adjust the gap between cards */
+    justify-content: space-between;
+    padding: 20px;
+    /* Optional padding to add space around the cards */
 }
-
-
 
 .card {
     width: 360px;
@@ -115,14 +126,15 @@ nav {
     box-shadow: 0 0 4px #d4ecff;
     border-radius: 4px;
     cursor: pointer;
-    background-color: white;
+    background-color: #fff;
     overflow: hidden;
+    transition: all 0.3s ease;
 }
 
 .card:hover {
     box-shadow: 1px 1px 8px #d4ecff;
-    background-color: #f9fdff;
-    transform: translate(-2px);
+    background-color: #bbd0e2;
+    transform: translateY(-2px);
 }
 
 
@@ -132,13 +144,13 @@ nav {
     object-fit: cover;
 }
 
-.card-content {
-    padding: 12px;
-}
-
 .card-content h3 a {
     color: black;
     text-decoration: none;
+}
+
+.card-content {
+    padding: 20px;
 }
 
 .card-content h3 {
@@ -146,9 +158,10 @@ nav {
     margin-bottom: 10px;
 }
 
-.news-source {
-    margin-block: 12px;
-
+.card-content .news-source {
+    font-size: 0.8rem;
+    color: #666;
+    margin-bottom: 5px;
 }
 
 .card-content .news-desc {
@@ -159,7 +172,7 @@ nav {
 
 footer {
     text-align: center;
-    padding-top: 35px; 
+    padding-top: 35px;
     background-color: #333;
     color: #fff;
     position: relative;
@@ -181,7 +194,7 @@ footer p {
     .nav-links {
         display: none;
         position: absolute;
-        background-color: #333;
+        background-color: #ffffff;
         color: white;
         width: 100%;
         left: 0;
@@ -202,7 +215,18 @@ footer p {
 
     .nav-links ul li {
         padding: 10px 20px;
-        background-color:  #0099ff;
+        background-color: #ffffff;
+    }
+
+    .nav-links ul li a {
+        font-weight: bold;
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+    }
+
+    .nav-links ul li a:hover {
+        color: #0099ff;
+        
     }
 
     .hamburger {
@@ -213,7 +237,7 @@ footer p {
     .search-bar {
         display: flex;
         flex-direction: row;
-        margin-top: 0;
+        margin-top: 50px;
     }
 
     .search-bar input[type="text"] {
@@ -223,7 +247,8 @@ footer p {
     }
 
     .card {
-        width: calc(100% - 20px); /* One card per row on mobile */
+        width: calc(100% - 20px);
+        /* One card per row on mobile */
     }
 }
 
@@ -233,7 +258,7 @@ footer p {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.card-headerambani img{
+.card-headerambani img {
     height: 600px;
     width: 650px;
 
