@@ -1,7 +1,7 @@
 const API_KEY = "ce2754c04cbb459aa7328102c1b7bf19";
-const url = "https://newsapi.org/v2/everything?q="
+const url = "https://newsapi.org/v2/everything?q=";
 
-window.addEventListener('load', () => fetchNews("india"));
+document.addEventListener('DOMContentLoaded', () => fetchNews("india"));
 
 async function fetchNews(query) {
     const res = await fetch(`${url}${query}&apiKey=${API_KEY}`);
@@ -11,39 +11,16 @@ async function fetchNews(query) {
 }
 
 function bindData(articles) {
-    const cardscontainer =document.getElementById('cards-container');
-    const newsCardTemplate = document.getElementById('template-news-card');
+    const cardsContainer = document.getElementById("cards-container");
+    const newsCardTemplate = document.getElementById("template-news-card");
 
-    cardscontainer.innerHTML = '';
+    cardsContainer.innerHTML = "";
 
-    articles.forEach(article => {
-        if(!article.urlToImage) return;
-        const cardClone =newsCardTemplate.content.cloneNode(true);
-        fillDataInCard(cardClone,article);
-        cardscontainer.appendChild(cardClone);
+    articles.forEach((article) => {
+        if (!article.urlToImage) return;
+
+        const cardClone = newsCardTemplate.content.cloneNode(true);
+        // fillDataInCard(cardClone, article); // Uncomment and implement this line to fill card data
+        cardsContainer.appendChild(cardClone);
     });
-
 }
-function fillDataInCard(cardClone,article) {
-    const newsImage = cardClone.querySelector('#news-Img');
-    const newsTitle = cardClone.querySelector('#news-title');
-    const newsSource = cardClone.querySelector('#news-source');
-    const newsDesc = cardClone.querySelector('#news-desc');
-
-
-    newsImage.src = article.urlToImage;
-    newsTitle.innerHTML = article.title;
-    newsDesc.innerHTML = article.description;
-
-    const date = new Data (article.publishedAt).toLocalString("en-US", {
-        timeZone: "Asia/Jakarta"
-    });
-    
-    newsSource.innerHTML = `${article.source.name} ${date}`;
-}
-
-
-
-
-
-
