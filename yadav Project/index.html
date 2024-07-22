@@ -1,5 +1,3 @@
-<!--const API_KEY = "ce2754c04cbb459aa7328102c1b7bf19";-->
-<!--"https://newsapi.org/v2/everything?q="-->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,7 +14,7 @@
     <nav>
         <div class="container nav-container">
             <a href="#" class="logo">
-                <img src="image/comoany logo.png" alt="">
+                <img src="image/comoany logo.png" alt="Company Logo">
             </a>
 
             <div class="hamburger" onclick="toggleMenu()">
@@ -26,10 +24,11 @@
             </div>
             <div class="nav-links">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="finance.html">Finance</a></li>
-                    <li><a href="#">Entertainment</a></li>
-                    <li><a href="#">Technology </a></li>
+                    <li id="Technology" class="hover-link nav-item">Technology</li>
+                    <li id="Sports" class="hover-link nav-item">Sports</li>
+                    <li id="Finance" class="hover-link nav-item">Finance</li>
+                    <li id="Politics" class="hover-link nav-item">Politics</li>
+
                 </ul>
             </div>
         </div>
@@ -41,12 +40,10 @@
         <button id="search-button">Search</button>
     </div>
 
-
     <main>
         <div class="cards-container container flex" id="cards-container">
 
         </div>
-
     </main>
 
     <template id="template-news-card">
@@ -55,18 +52,15 @@
                 <img src="https://via.placeholder.com/400x200" alt="news-image" id="news-img">
             </div>
             <div class="card-content">
-                <h3 id="news-title">Bigg Boss OTT 3: ‘Vada Pav Girl’ Chandrika Dixit Gera gets evicted from the Anil
-                    Kapoor-hosted show</h3>
-                <h6 class="news-source" id="news-source">End Gadget 11/07/2024</h6>
-                <p class="news-desc" id="news-desc">After getting slammed by Anil Kapoor on the latest Weekend
-                    episode, 'Vada Pav Girl' Chandrika Dixit got evicted from Bigg Boss OTT 3. </p>
+                <h3 id="news-title"></h3>
+                <h6 class="news-source" id="news-source"></h6>
+                <p class="news-desc" id="news-desc"></p>
             </div>
         </div>
     </template>
 
     <footer>
         <p>&copy; 2024 News Blog. All rights reserved.</p>
-
     </footer>
 
     <script>
@@ -76,9 +70,8 @@
         }
     </script>
 
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 
 </body>
 
-</html> 
+</html>

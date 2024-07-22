@@ -68,13 +68,13 @@ nav {
     cursor: pointer;
 }
 
-.nav-links ul li a {
+.hover-link  {
     font-weight: bold;
     color: rgb(0, 0, 0);
     text-decoration: none;
 }
 
-.nav-links ul li a:hover {
+.hover-link:hover {
     color: #0099ff;
     
 }
@@ -219,13 +219,13 @@ footer p {
         background-color: #ffffff;
     }
 
-    .nav-links ul li a {
+    .hover-link{
         font-weight: bold;
         color: rgb(0, 0, 0);
         text-decoration: none;
     }
 
-    .nav-links ul li a:hover {
+    .hover-link:hover {
         color: #0099ff;
         
     }
