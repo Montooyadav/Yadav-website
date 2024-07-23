@@ -24,10 +24,10 @@
             </div>
             <div class="nav-links">
                 <ul>
-                    <li id="Technology" class="hover-link nav-item">Technology</li>
-                    <li id="Sports" class="hover-link nav-item">Sports</li>
-                    <li id="Finance" class="hover-link nav-item">Finance</li>
-                    <li id="Politics" class="hover-link nav-item">Politics</li>
+                    <li id="Technology" onclick="onNavItemClick('Technology')" class="hover-link nav-item">Technology</li>
+                    <li id="Sports" onclick="onNavItemClick('Sports')"class="hover-link nav-item">Sports</li>
+                    <li id="Finance" onclick="onNavItemClick('Finance')" class="hover-link nav-item">Finance</li>
+                    <li id="Politics" onclick="onNavItemClick('Politics')" class="hover-link nav-item">Politics</li>
 
                 </ul>
             </div>
@@ -37,7 +37,7 @@
 
     <div class="search-bar">
         <input id="search-text" type="text" class="news-input" placeholder="e.g. Science">
-        <button id="search-button">Search</button>
+        <button id="search-button" class="search-button">Search</button>
     </div>
 
     <main>
